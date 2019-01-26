@@ -74,7 +74,8 @@
       </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
+    <header class="masthead text-center text-white d-flex cover has-mask">
+      <div class="mask"></div>
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
@@ -562,6 +563,18 @@
         } else {
           console.error(demo.error);
         }
+    </script>
+
+    <script>
+      function resizeMask(){
+        var headerHeight = $('header').outerHeight();
+        $('.mask').height(headerHeight);
+      }
+
+      $(document).ready(function(){
+        resizeMask();
+        $(window).on('load resize', resizeMask);
+      });
     </script>
 
   </body>
