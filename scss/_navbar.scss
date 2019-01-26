@@ -5,8 +5,11 @@
   @include sans-serif-font;
   @include transition-all;
   .navbar-brand {
-    font-weight: 700;
-    text-transform: uppercase;
+    font-family: 'Lobster', cursive !important;
+    font-weight: 500;
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
     color: $primary;
     @include sans-serif-font;
     &:focus,

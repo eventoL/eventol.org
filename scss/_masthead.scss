@@ -1,16 +1,35 @@
 // Styling for the masthead
+header.cover.has-mask .mask {
+  background-color: #94B0B3;
+  opacity: .65;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url('../img/header.jpg');
+  background: rgba(0, 0, 0, 0) url('../img/header.png') repeat scroll center center / cover;
   background-position: center center;
   @include background-cover;
+
   hr {
     margin-top: 30px;
     margin-bottom: 30px;
   }
   h1 {
     font-size: 2rem;
+  }
+  h3 {
+    font-style: italic;
+    color: rgba(255,255,255,.98);
+  }
+  p.description {
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(255,255,255,.98);
   }
   p {
     font-weight: 300;

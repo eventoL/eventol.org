@@ -43,6 +43,18 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.bg-eventol {
+  background-color: #1f6879;
+}
+
+.border-eventol {
+  border-color: #1f6879;
+}
+
+.text-eventol {
+  color: #1f6879;
+}
+
 .bg-primary {
   background-color: #1f6879 !important;
 }
@@ -88,8 +100,11 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: 'Lobster', cursive !important;
+  font-weight: 500;
+  font-size: 40px;
+  padding: 0px;
+  margin: 0px;
   color: #1f6879;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
@@ -164,10 +179,19 @@ img::-moz-selection {
   }
 }
 
+header.cover.has-mask .mask {
+  background-color: #94B0B3;
+  opacity: .65;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
+  background: rgba(0, 0, 0, 0) url("../img/header.png") repeat scroll center center/cover;
   background-position: center center;
   background-size: cover;
 }
@@ -179,6 +203,17 @@ header.masthead hr {
 
 header.masthead h1 {
   font-size: 2rem;
+}
+
+header.masthead h3 {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+header.masthead p.description {
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.98);
 }
 
 header.masthead p {
