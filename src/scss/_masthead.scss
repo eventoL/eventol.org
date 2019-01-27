@@ -11,7 +11,7 @@ header.cover.has-mask .mask {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background: rgba(0, 0, 0, 0) url('../img/header.png') repeat scroll center center / cover;
+  background: rgba(0, 0, 0, 0) url('../../assets/header.png') repeat scroll center center / cover;
   background-position: center center;
   @include background-cover;
 
