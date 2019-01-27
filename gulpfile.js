@@ -9,6 +9,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+const browserify = require('gulp-browserify');
 const pkg = require('./package.json');
 
 // Set the banner content
@@ -107,6 +108,9 @@ function js() {
       '!./src/js/jqBootstrapValidation.js'
     ])
     .pipe(babel())
+    .pipe(browserify({
+      "transform": ["babelify"]
+    }))
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg
