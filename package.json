@@ -39,9 +39,15 @@
     "scrollreveal": "4.0.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-loader": "^7.1.5",
     "browser-sync": "2.26.3",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "4.0.0",
     "gulp-header": "2.0.7",
     "gulp-plumber": "^1.2.1",
