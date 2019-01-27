@@ -12,15 +12,6 @@ const uglify = require("gulp-uglify");
 const browserify = require('gulp-browserify');
 const pkg = require('./package.json');
 
-// Set the banner content
-const banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
-  ' */\n',
-  '\n'
-].join('');
-
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function(cb) {
 
@@ -85,9 +76,6 @@ function css() {
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
-    }))
-    .pipe(header(banner, {
-      pkg: pkg
     }))
     .pipe(gulp.dest("./dist/css"))
     .pipe(rename({
