@@ -1,20 +1,18 @@
 // Load plugins
 const gulp = require('gulp');
 const babel = require('gulp-babel');
-const autoprefixer = require("gulp-autoprefixer");
-const browsersync = require("browser-sync").create();
-const cleanCSS = require("gulp-clean-css");
-const header = require("gulp-header");
-const plumber = require("gulp-plumber");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-const uglify = require("gulp-uglify");
+const autoprefixer = require('gulp-autoprefixer');
+const browsersync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
+const header = require('gulp-header');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 const browserify = require('gulp-browserify');
-const pkg = require('./package.json');
 
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function(cb) {
-
+// Copy third party libraries from /node_modules into /dist/vendor
+gulp.task('vendor', cb => {
   // Bootstrap
   gulp.src([
       './node_modules/bootstrap/dist/**/*',
@@ -61,83 +59,76 @@ gulp.task('vendor', function(cb) {
   .pipe(gulp.dest('./dist/vendor/countup.js'))
 
   cb();
-
 });
 
 // CSS task
-function css() {
-  return gulp
-    .src("./src/scss/*.scss")
-    .pipe(plumber())
-    .pipe(sass({
-      outputStyle: "expanded"
-    }))
-    .on("error", sass.logError)
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest("./dist/css"))
-    .pipe(rename({
-      suffix: ".min"
-    }))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("./dist/css"))
-    .pipe(browsersync.stream());
-}
+const css = () => gulp
+  .src('./src/scss/*.scss')
+  .pipe(plumber())
+  .pipe(sass({
+    outputStyle: 'expanded'
+  }))
+  .on('error', sass.logError)
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(gulp.dest('./dist/css'))
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(cleanCSS())
+  .pipe(gulp.dest('./dist/css'))
+  .pipe(browsersync.stream());
 
 // JS task
-function js() {
-  return gulp
-    .src([
-      './src/js/*.js',
-      '!./src/js/*.min.js',
-      '!./src/js/contact_me.js',
-      '!./src/js/jqBootstrapValidation.js'
-    ])
-    .pipe(babel())
-    .pipe(browserify({
-      "transform": ["babelify"]
-    }))
-    .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(browsersync.stream());
-}
+const js = () => gulp
+  .src([
+    './src/js/*.js',
+    '!./src/js/*.min.js',
+    '!./src/js/contact_me.js',
+    '!./src/js/jqBootstrapValidation.js'
+  ])
+  .pipe(babel())
+  .pipe(browserify({
+    transform: ['babelify']
+  }))
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(gulp.dest('./dist/js'))
+  .pipe(browsersync.stream());
 
 // Tasks
-gulp.task("css", css);
-gulp.task("js", js);
+gulp.task('css', css);
+gulp.task('js', js);
 
 // BrowserSync
-function browserSync(done) {
+const browserSync = done => {
   browsersync.init({
     server: {
-      baseDir: "./"
+      baseDir: './'
     }
   });
   done();
 }
 
 // BrowserSync Reload
-function browserSyncReload(done) {
+const browserSyncReload = done => {
   browsersync.reload();
   done();
 }
 
 // Watch files
-function watchFiles() {
-  gulp.watch("./src/scss/**/*", css);
-  gulp.watch(["./src/js/**/*.js", "!./src/js/*.min.js"], js);
-  gulp.watch("./**/*.html", browserSyncReload);
+const watchFiles = () => {
+  gulp.watch('./src/scss/**/*', css);
+  gulp.watch(['./src/js/**/*.js', '!./src/js/*.min.js'], js);
+  gulp.watch('./**/*.html', browserSyncReload);
 }
 
+// default task
 gulp.task('default', gulp.parallel('vendor', css, js));
 
 // dev task
-gulp.task("dev", gulp.parallel(watchFiles, browserSync));
+gulp.task('dev', gulp.parallel(watchFiles, browserSync));
