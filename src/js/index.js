@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Timeline from './components/timeline.jsx';
-
-// Counters
-import {
-  get, getLength, CONTRIBUTORS_URL, TAGS_URL, REPO_URL,
-} from './github';
 import createCounter from './counter';
+import Timeline from './components/Timeline.jsx';
+import {get, getLength} from './github';
+import {CONTRIBUTORS_URL, TAGS_URL, REPO_URL} from './constants';
 
 
 // Mask resize
