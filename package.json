@@ -5,7 +5,10 @@
   "description": "Landing page and documentation page of eventol.org",
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp default"
+    "build": "gulp default",
+    "eslint": "eslint --ext .jsx --ext .js src",
+    "eslint-fix": "eslint --ext .jsx --ext .js --fix src",
+    "eslint-report": "eslint -f node_modules/eslint-html-reporter/reporter.js -o report.html --ext .jsx --ext .js src || true"
   },
   "keywords": [
     "eventol",
@@ -57,11 +60,20 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-polyfill": "^6.26.0",
     "babelify": "^10.0.0",
     "browser-sync": "2.26.3",
     "browserify": "^16.2.3",
+    "eslint": "5.9.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-html-reporter": "0.5.2",
+    "eslint-import-resolver-node": "0.3.2",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "21.27.2",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "6.0.0",
     "gulp-babel": "^8.0.0",
