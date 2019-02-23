@@ -91,7 +91,7 @@ const js = () => gulp
   ])
   .pipe(babel())
   .pipe(browserify({
-    transform: ['babelify']
+    transform: ['babelify', 'reactify', 'browserify-jsx']
   }))
   .pipe(uglify())
   .pipe(rename({
@@ -123,7 +123,7 @@ const browserSyncReload = done => {
 // Watch files
 const watchFiles = () => {
   gulp.watch('./src/scss/**/*', css);
-  gulp.watch(['./src/js/**/*.js', '!./src/js/*.min.js'], js);
+  gulp.watch(['./src/js/**/*.{js,jsx}', '!./src/js/*.min.{js,jsx}'], js);
   gulp.watch('./**/*.html', browserSyncReload);
 }
 
