@@ -1,7 +1,11 @@
 const presets = [
-  "@babel/preset-env"
+  "@babel/preset-env",
+  "@babel/preset-react"
 ];
+
 const plugins = [
+  "@babel/plugin-transform-react-jsx",
+
   // Stage 0
   "@babel/plugin-proposal-function-bind",
 
