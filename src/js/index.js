@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Timeline from './components/timeline.jsx';
 
 // Counters
 import {
@@ -21,3 +25,5 @@ createCounter('counter-contributors', getLength(CONTRIBUTORS_URL), 0);
 createCounter('counter-versions', getLength(TAGS_URL), 0);
 createCounter('counter-stars', get(REPO_URL, 'stargazers_count'), 0);
 createCounter('counter-forks', get(REPO_URL, 'forks_count'), 0);
+
+ReactDOM.render(<Timeline />, document.getElementById('timeline-events'));
