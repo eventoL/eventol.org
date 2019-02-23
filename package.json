@@ -1,37 +1,35 @@
 {
-  "title": "Creative",
-  "name": "startbootstrap-creative",
-  "version": "5.0.2",
-  "description": "Creative is a stylish one page HTML theme for Bootstrap.",
+  "title": "EventoL landing page",
+  "name": "eventol.org-landing",
+  "version": "0.1",
+  "description": "Landing page and documentation page of eventol.org",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp default"
   },
   "keywords": [
-    "css",
-    "sass",
+    "eventol",
+    "eventol.org",
     "html",
-    "responsive",
-    "theme",
-    "template"
+    "documentation",
+    "responsive"
   ],
-  "homepage": "https://startbootstrap.com/template-overviews/creative",
+  "homepage": "https://eventol.github.io/eventol.org/",
   "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-creative/issues",
-    "email": "feedback@startbootstrap.com"
+    "url": "https://github.com/eventoL/eventol.org/issues"
   },
   "license": "MIT",
-  "author": "Start Bootstrap",
+  "author": "EventoL organization",
   "contributors": [
-    "David Miller (http://davidmiller.io/)"
+    "Federico Gonzalez (FedeG)"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
+    "url": "https://github.com/eventoL/eventol.org.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.6.3",
-    "bootstrap": "4.2.1",
+    "bootstrap": ">=4.3.1",
     "countup.js": "^1.9.3",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
