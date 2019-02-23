@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import TimelineCard from './TimelineCard.jsx';
 
-const getCard = () => <TimelineCard {...cardProps} /> : <div className='col-sm' />;
+const getCard = (show, cardProps) => (show ? <TimelineCard {...cardProps} /> : <div className='col-sm' />);
 
 const TimelineItem = ({
   align, active, isLast, isFirst, ...cardProps
@@ -23,7 +23,7 @@ const TimelineItem = ({
         <div className='col'>&nbsp;</div>
       </div>
     </div>
-    {getCard(!align === 'left', {...cardProps, active})}
+    {getCard(align === 'right', {...cardProps, active})}
   </div>
 );
 
