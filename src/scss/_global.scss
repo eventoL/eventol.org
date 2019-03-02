@@ -52,6 +52,16 @@ section {
   padding: 8rem 0;
 }
 
+.container {
+  max-width: 90% !important;
+}
+
+#timeline {
+  .container {
+    max-width: 85% !important;
+  }
+}
+
 .section-heading {
   margin-top: 0;
 }
