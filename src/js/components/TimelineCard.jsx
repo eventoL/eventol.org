@@ -1,24 +1,29 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 
+
+const getExtraClasses = (
+  active, release, muted,
+) => `${muted ? 'text-muted' : ''}  ${active && 'text-active'} ${release && 'text-eventol'}`;
 
 export const TimelineCard = ({
-  active, date, title,
-  text, muted, details,
+  active, date, title, index,
+  text, muted, detail, release,
 }) => (
   <div className='col-sm py-2'>
-    <div className={`card ${active && 'border-eventol shadow'}`}>
+    <div className={`card ${release && 'border-eventol shadow'} ${active && 'border-active shadow'}`}>
       <div className='card-body'>
-        <div className={`float-right ${muted ? 'text-muted' : ''}  ${active && 'text-eventol'} small`}>{date}</div>
-        <h4 className={`card-title ${muted ? 'text-muted' : ''}  ${active && 'text-eventol'}`}>{title}</h4>
-        <p>{text}</p>
-        {!_.isEmpty(details) && (
+        <div className={`float-right ${getExtraClasses(active, release, muted)} small`}>{date}</div>
+        <h4 className={`card-title ${getExtraClasses(active, release, muted)}`}><ReactMarkdown source={title} /></h4>
+        <p><ReactMarkdown source={text} /></p>
+        {!_.isEmpty(detail) && (
           <React.Fragment>
-            <button className='btn btn-sm btn-outline-secondary' type='button' data-target='#t22_details' data-toggle='collapse'>Show Details ▼</button>
-            <div className='collapse border' id='t22_details'>
+            <button className='btn btn-sm btn-outline-secondary' type='button' data-target={`#t${index}_details`} data-toggle='collapse'>Show Details ▼</button>
+            <div className='collapse border' id={`t${index}_details`}>
               <div className='p-2 text-monospace'>
-                {details.map(detail => <div>{detail}</div>)}
+                <ReactMarkdown source={detail} />
               </div>
             </div>
           </React.Fragment>
@@ -30,20 +35,23 @@ export const TimelineCard = ({
 
 TimelineCard.propTypes = {
   active: PropTypes.bool,
+  release: PropTypes.bool,
   date: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
   muted: PropTypes.bool,
-  details: PropTypes.bool,
+  detail: PropTypes.string,
+  index: PropTypes.number.isRequired,
 };
 
 TimelineCard.defaultProps = {
   active: false,
+  release: false,
   date: '',
   title: '',
   text: '',
   muted: false,
-  details: false,
+  detail: '',
 };
 
 export default TimelineCard;
