@@ -53,6 +53,14 @@ section {
   padding: 8rem 0;
 }
 
+.container {
+  max-width: 90% !important;
+}
+
+#timeline .container {
+  max-width: 85% !important;
+}
+
 .section-heading {
   margin-top: 0;
 }
@@ -165,16 +173,32 @@ img::-moz-selection {
   background-color: #1f6879;
 }
 
+.bg-active {
+  background-color: #38B538;
+}
+
 .border-eventol {
   border-color: #1f6879;
+}
+
+.border-active {
+  border-color: #38B538;
 }
 
 .text-eventol {
   color: #1f6879;
 }
 
+.text-active {
+  color: #38B538;
+}
+
 .eventol-color {
   color: #1f6879;
+}
+
+.active-color {
+  color: #38B538;
 }
 
 .font-eventol {
