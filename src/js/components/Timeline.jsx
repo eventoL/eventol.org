@@ -9,6 +9,7 @@ const Timeline = () => (
     {
       TIMELINE_DATA.map((data, index) => (
         <TimelineItem
+          key={data.date}
           isFirst={index === 0}
           isLast={index === TIMELINE_DATA.length - 1}
           {...data}
