@@ -1,2 +1,81 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+eventol_org/conf/locale/en/
+eventol_org/conf/locale/**/*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.idea/
+
+#Backup files
+*~
+
+# My files
+my_settings.py
+deploy.txt
+eventol_org/static/
+media/
+env/
+eventol_org/media/
+eventol_org/manager/static/
 node_modules
-bower_components
+db.sqlite3
+*.mo
+eventol_org/front/webpack-stats-local.json
+eventol_org/front/webpack-stats-prod.json
+eventol_org/front/eventol_org/static/manager/
+eventol_org/front/eventol_org/static/bundles/
+eventol_org/front/report.html
+.coverage
+.coverage.*
+.cache
+htmlcov/
+coverage/
+jest_*
+venv/
+.vscode/
+*.orig
+.config/
+*.tar.gz
+eventol_org/front/scss-lint-report.html
+eventol_org/front/yarn-error.log
+data/
+
+.ipython/
+.python_history
+.yarnrc
+	
+.yarn/
+.pytest_cache/
+.local/
