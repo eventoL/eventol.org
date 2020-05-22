@@ -79,3 +79,5 @@ data/
 .yarn/
 .pytest_cache/
 .local/
+
+.env
