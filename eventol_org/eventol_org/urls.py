@@ -13,9 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.views.i18n import JavaScriptCatalog
+from django.urls import path, include
+
+from landing import views as landing_views
 
 urlpatterns = [
+    path('', landing_views.index, name="index"),
     path('admin/', admin.site.urls),
-]
+    path('jsi18n/', JavaScriptCatalog.as_view(),
+        {'domain': 'djangojs', 'packages': None}, name='javascript-catalog'),
+    path('i18n/', include('django.conf.urls.i18n')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
