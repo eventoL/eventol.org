@@ -1,7 +1,19 @@
 // sass-lint:disable no-url-domains no-url-protocols
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
 // sass-lint:enable no-url-domains no-url-protocols
 
-@import './commons';
-@import './variables';
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "navbar.scss";
+@import "eventol.scss";
+@import "counter.scss";
+@import "masthead.scss";
+@import "services.scss";
+@import "portfolio.scss";
+@import "carousel.scss";
+@import "bootstrap-overrides.scss";
