@@ -3,8 +3,6 @@ import {render} from 'react-dom';
 
 import Home from '../containers/Home';
 
-import './index.scss';
-
 window.render_components = properties => {
   window.params = {...properties};
   render(
