@@ -399,6 +399,154 @@ const CHANGELOGS = {
   - [#353](https://github.com/eventoL/eventoL/issues/353) - Reponsive en la pagina de documentación no funciona correctamente
   - [#332](https://github.com/eventoL/eventoL/issues/332) - Limitar el admin para evitar su uso en casos incorrectos
   `,
+  'v2.2.0': `
+#### Issues:
+  - #597 - Update bootstrap to v4
+  - #608 - Create datetime filters in activities API
+  - #595 - Add create event button to home page
+  - #591 - Add jquery, bootstrap and bootstrap-material to base bundle
+  - #590 - Create bundle with leaflet
+  - #589 - Create bundle with slick and slick-carousel
+  - #588 - Remove lessc files and move that css to scss bundles
+  - #587 - Remove bower
+  - #578 - Fix all pylints
+  - #572 - Update WsCommunicator to javascript class
+  - #566 - Refactor report page
+  - #562 - Fix all sasslints
+  - #552 - Add Makefile
+  - #551 - Create a multi-stage build for docker image
+  - #542 - Move django client, api client and api request factory to new pytest fixtures
+  - #541 - Add tests for all api endpoints required from site (index, tag index and report page)
+  - #537 - Show a list with your event speakers for contact they
+  - #536 - Change as_days to sort_days
+  - #535 - Fix "installer_level" template tag for use "case" or another option for remove multiple ifs in this function
+  - #528 - Sum python coverage and javascript coverage for codeclimate
+  - #526 - Replace landscape.io with codeclimate.com
+  - #524 - Update test to pytest and update test environment
+  - #523 - Remove ELK stack
+  - #521 - Autodeploy
+  - #516 - Configurar el DNS para los dominios eventol.org y eventol.com.ar
+  - #511 - Add use_talks field to Event model
+  - #507 - Add description to Tag field in Event model
+  - #433 - Mover todos los valores repetidos en el codigo del front a constantes
+  - #430 - Add snapshot tests to react code
+  - #351 - Hacer mockup de la pagina para eventol.com.ar/eventol.org
+  - #266 - Agregar testing
+  - #349 - Create and add icon for 500 code (internal server error)
+  - #348 - Create and add icon for 404 code (page not found)
+  - #346 - Create form for create dummy activities
+  
+#### Fixed bugs:
+  - #603 - Fix responsive styling in event create/edit form UX/UI
+  - #602 - Event dates validation is broken when the user remove dates
+  - #592 - QR code in Manage Attendance and auto-read QR code page doesn't work
+  - #586 - The events without installations can use installers
+  - #585 - Activity details view hasn't edit option
+  - #584 - Tags is required field in Event form
+  - #581 - 'NoneType' object has no attribute 'complex_filter' in event admin
+  - #576 - Use same styling in Item and ItemMap UX/UI
+  - #549 - Remove en translation folder
+  - #548 - Create ActivityType API
+  - #543 - Type in activity model has error on api request
+  - #540 - Fix ws_protocol params to report page
+  - #539 - Replace "wiki.cafelug.org.ar/index.php?title=Flisol/Guía_del_buen_instalador" with "https://wiki.antifa-glug.org/books/flisol-caba/page/gu%C3%ADa-del-buen-instalador"
+  - #512 - Remove collaboration tab in Event index when Event doesn't have collaborators
+  - #510 - Events without proposals require limit proposal date
+  - #508 - Events without use_proposals require activities_proposal_form_text
+  - #459 - Show/hide collaborators, installers and installations from the report
+  - #385 - El formulario de registración siempre pregunta "is going to install"
+  - #418 - Arreglar todos los lints de frontend
+  
+#### Security updates
+  - #514 - Update django to 1.11.19
+  
+#### Internationalization
+  - #502 - Hosted weblate app/webhook internal
+  - #504 - New language request from Weblate (Chinese, Traditional, zh_Hant)
+  - #501 - New language request from Weblate (Dutch)
+  - #500 - New language request from Weblate (Swedish)
+  - #499 - New language request from Weblate (Danish)
+  - #498 - New language request from Weblate (Norwegian Bokmål)
+  `,
+  'v2.2.1': `
+#### Issues:
+  - #358 - Add dropdown of languages in index and tag index pages
+  - #550 - Add contributors list in README file
+  - #529 - Add example tests for forms and autocomplete forms
+  - #462 - Agregar a la documentación la configuración para unaccent en postgres
+  - #719 - Use Rich Text Field instead of Text Field on activities proposal form text
+  
+#### Fixed bugs:
+  - #633 - Error al ejecutar make deploy-dev
+  - #639 - Internal server error on export attendees
+  - #638 - The report page doesn't show the table
+  
+#### Security updates
+  - python 3.7.4 a 3.9.2
+  - Django 1.11.26 to 1.11.27
+  
+#### Internationalization
+  - #619 - New language request (French, fr) - @NathanBnm
+  - #624 - Misspellings
+  `,
+  'v2.2.2': `
+#### Version updates:
+  - #755 - Bump python from 3.9.2-alpine to 3.9.6-alpine3.13
+  - #757 - Bump node from 12.12.0-alpine to 16-alpine3.13
+  
+#### Security updates
+  - #647 - Bump jquery from 3.4.1 to 3.5.0
+  - #657 - Bump websocket-extensions from 0.1.3 to 0.1.4
+  - #671 - Bump node-sass from 4.13.0 to 4.13.1
+  - #674 - Bump decompress from 4.2.0 to 4.2.1
+  - #675 - Bump http-proxy from 1.18.0 to 1.18.1
+  - #689 - Bump dot-prop from 4.2.0 to 4.2.1
+  - #690 - Bump bl from 1.2.2 to 1.2.3
+  - #700 - Bump ini from 1.3.5 to 1.3.8
+  - #706 - Bump elliptic from 6.5.2 to 6.5.4
+  - #708 - Bump handlebars from 4.5.3 to 4.7.7
+  - #710 - Bump lodash from 4.17.15 to 4.17.21
+  - #715 - Bump yargs-parser from 5.0.0 to 5.0.1
+  - #723 - Bump y18n from 3.2.1 to 3.2.2
+  - #731 - Bump ssri from 6.0.1 to 6.0.2
+  - #736 - Bump ua-parser-js from 0.7.20 to 0.7.28
+  - #737 - Bump url-parse from 1.4.7 to 1.5.1
+  - #741 - Bump hosted-git-info from 2.8.5 to 2.8.9
+  - #745 - Bump browserslist from 4.7.3 to 4.16.6
+  - #751 - Bump dns-packet from 1.3.1 to 1.3.4
+  - #752 - Bump ws from 5.2.2 to 5.2.3
+  - #753 - Bump color-string from 1.5.3 to 1.5.5
+  
+#### Internationalization
+  - #722 - Update Dutch, French and Spanish translations from Weblate (@NathanBnm @Vistaus)
+  `,
+  'v2.3': `
+#### Issues:
+  - #532 - Create generic method for custom template tags of roles
+  - #763 - Enable the option to configure Sentry (and pull request: #764)
+  - #768 - Page with instance details: version, tag, python version, django version, etc
+  - #765 - Add filters and columns with details for each models in django admin (/admin)
+  
+#### Fixed Bugs:
+  - #769 - Organizers can't view reviewers admin
+  
+#### Version updates:
+  - #766 - Bump path-parse from 1.0.6 to 1.0.7 in /eventol/front
+  - #767 - Bump tar from 4.4.13 to 4.4.19 in /eventol/front
+  
+#### Security updates
+  - #761 - [Security] Bump tar from 4.4.13 to 4.4.15 in /eventol/front
+  
+#### Internationalization
+  - #693 - Add missing space
+  - #772 - Translations update from Weblate
+  `,
+  'v2.3.1': `
+#### Fixed Bugs:
+  - #634 - Fix make collectstatic
+  - #643 - Fix make migrate
+  - #642 #633 #637 - Fix make deploy-dev
+  `,
 };
 
 export const TIMELINE_DATA = [{
@@ -465,4 +613,36 @@ export const TIMELINE_DATA = [{
   title: 'Start new translations',
   text: 'Languages: Chinese',
   align: 'left',
+},{
+  date: '25/11/2019',
+  title: 'EventoL v2.2.0',
+  text: 'First release of 2019: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.1.0)',
+  detail: CHANGELOGS['v2.2.0'],
+  release: true,
+},{
+  date: '22/05/2021',
+  title: 'EventoL v2.2.1',
+  text: 'First release of 2021: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.2.1)',
+  align: 'left',
+  detail: CHANGELOGS['v2.2.1'],
+  release: true,
+},{
+  date: '20/07/2021',
+  title: 'EventoL v2.2.2',
+  text: 'Second release of 2021: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.2.2)',
+  detail: CHANGELOGS['v2.2.2'],
+  release: true,
+},{
+  date: '17/01/2022',
+  title: 'EventoL v2.3',
+  text: 'First release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3)',
+  align: 'left',
+  detail: CHANGELOGS['v2.3'],
+  release: true,
+},{
+  date: '17/01/2022',
+  title: 'EventoL v2.3.1',
+  text: 'Second release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3.1)',
+  detail: CHANGELOGS['v2.3.1'],
+  release: true,
 }];
