@@ -613,36 +613,42 @@ export const TIMELINE_DATA = [{
   title: 'Start new translations',
   text: 'Languages: Chinese',
   align: 'left',
-},{
+}, {
+  date: '23/07/2019',
+  title: 'New EventoL sandbox instance',
+  text: 'Sandbox instance [https://sandbox.eventol.org/](https://sandbox.eventol.org/)',
+  active: true,
+}, {
   date: '25/11/2019',
   title: 'EventoL v2.2.0',
   text: 'First release of 2019: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.1.0)',
   detail: CHANGELOGS['v2.2.0'],
   release: true,
-},{
+  align: 'left',
+}, {
   date: '22/05/2021',
   title: 'EventoL v2.2.1',
   text: 'First release of 2021: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.2.1)',
-  align: 'left',
   detail: CHANGELOGS['v2.2.1'],
   release: true,
-},{
+}, {
   date: '20/07/2021',
   title: 'EventoL v2.2.2',
   text: 'Second release of 2021: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.2.2)',
   detail: CHANGELOGS['v2.2.2'],
   release: true,
-},{
-  date: '17/01/2022',
+  align: 'left',
+}, {
+  date: '16/01/2022',
   title: 'EventoL v2.3',
   text: 'First release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3)',
-  align: 'left',
   detail: CHANGELOGS['v2.3'],
   release: true,
-},{
+}, {
   date: '17/01/2022',
   title: 'EventoL v2.3.1',
   text: 'Second release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3.1)',
   detail: CHANGELOGS['v2.3.1'],
   release: true,
+  align: 'left',
 }];
