@@ -547,6 +547,32 @@ const CHANGELOGS = {
   - #643 - Fix make migrate
   - #642 #633 #637 - Fix make deploy-dev
   `,
+  'v2.3.2': `
+### CHANGELOG:
+
+#### Issues:
+  - #785 - Create releases registry on gitlab and add build of the image with git tag on pipeline
+  
+#### Fixed Bugs:
+  - #779 - Remove microbadger from repository tags
+  - #780 - Remove requires.io from repository tags
+  - #781 - Remove travis from repository tags and pull requests pipeline
+  - #783 - Error 500 on instance details in the production environment
+  - #784 - Remove docker hub references and build
+  `,
+  'v2.3.3': `
+### CHANGELOG:
+
+#### Issues:
+  - #795 - Add DONT_SET_FILE_UPLOAD_PERMISSIONS to .env.dist and refactor
+  - #654 - Add audio option for captcha
+  - #799 - Disable social provider from admin
+  - #798 - Add a hidden menu option to skip directly to content
+  
+#### Fixed Bugs:
+  - #791 - Map: Resize and recalculate location on zoom
+  - #800 - Change form labels color
+  `,
 };
 
 export const TIMELINE_DATA = [{
@@ -649,6 +675,19 @@ export const TIMELINE_DATA = [{
   title: 'EventoL v2.3.1',
   text: 'Second release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3.1)',
   detail: CHANGELOGS['v2.3.1'],
+  release: true,
+  align: 'left',
+}, {
+  date: '09/02/2022',
+  title: 'EventoL v2.3.2',
+  text: 'Second release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3.2)',
+  detail: CHANGELOGS['v2.3.2'],
+  release: true,
+}, {
+  date: '11/04/2022',
+  title: 'EventoL v2.3.3',
+  text: 'Fourth release of 2022: [in github](https://github.com/eventoL/eventoL/releases/tag/v2.3.3)',
+  detail: CHANGELOGS['v2.3.3'],
   release: true,
   align: 'left',
 }];
